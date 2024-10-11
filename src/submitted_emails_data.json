@@ -1,0 +1,18 @@
+[
+  {
+    "recipient": "aldrin112602@gmail.com",
+    "subject": "Test mail",
+    "text": "This is a test email.",
+    "from_name": "Aldrin Caballero",
+    "from_mail": "aldrincaballero94@gmail.com",
+    "timestamp": "2024-10-11T09:04:35.729Z"
+  },
+  {
+    "recipient": "caballeroaldrin02@gmail.com",
+    "subject": "Test mail",
+    "text": "This is a test email.",
+    "from_name": "James Bond",
+    "from_mail": "aldrin112602@gmail.com",
+    "timestamp": "2024-10-11T09:07:46.781Z"
+  }
+]
