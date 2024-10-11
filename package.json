@@ -1,0 +1,29 @@
+{
+  "name": "email-api",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "email-api"
+  ],
+  "author": {
+    "name": "Aldrin E. Caballero",
+    "email": "caballeroaldrin02@gmail.com"
+  },
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.15"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
