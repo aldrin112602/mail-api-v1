@@ -5,15 +5,15 @@ require("dotenv").config();
 
 const emailController = {
   sendEmail: async (req, res) => {
-    const { recipient, subject, text, from_name, from_mail } = req.body;
+    const { recipient, subject, text, html, from_name, from_mail } = req.body;
 
-    if (!recipient || !subject || !text) {
+    if (!recipient || !subject || (!text && !html)) {
       return res.status(400).json({
         message: "All fields are required",
         fields: [
           "recipient: required",
           "subject: required",
-          "text: required",
+          "text or html: required",
           "from_name: optional",
           "from_mail: optional",
         ],
@@ -21,6 +21,7 @@ const emailController = {
           recipient: "receiver@gmail.com",
           subject: "Test mail",
           text: "This is a test email.",
+          html: "<p>This is a <strong>test</strong> email.</p>",
           from_name: "Aldrin Caballero",
           from_mail: "caballeroaldrin02@gmail.com",
         },
@@ -53,6 +54,7 @@ const emailController = {
       to: recipient,
       subject,
       text,
+      html, // Add html option for HTML content
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
@@ -64,6 +66,7 @@ const emailController = {
           recipient,
           subject,
           text,
+          html,
           from_name: from_name || "No-Reply",
           from_mail: from_mail || "caballeroaldrin02@gmail.com",
           timestamp: new Date(),
